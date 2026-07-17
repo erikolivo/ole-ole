@@ -1,0 +1,12 @@
+{
+  "_comentario": "Clave = nombre tal como aparece en API-Football. Valor = nombre tal como aparece en ClubElo. Se completa solo con el tiempo via sin_cruce_YYYY-MM-DD.json",
+  "Manchester City": "Man City",
+  "Manchester United": "Man United",
+  "Bayern Munich": "Bayern",
+  "Inter": "Inter",
+  "Athletic Club": "Ath Bilbao",
+  "Real Sociedad": "Sociedad",
+  "Newcastle": "Newcastle",
+  "Wolverhampton Wanderers": "Wolves",
+  "Botafogo": "Botafogo"
+}
