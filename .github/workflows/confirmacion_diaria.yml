@@ -1,0 +1,28 @@
+name: Confirmación diaria (Fase 2 repartida)
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  confirmar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Ejecutar reparto y confirmación del día (Fase 2)
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python requests_scheduler.py
+      - name: Guardar datos generados
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Confirmación diaria automática"
+          file_pattern: "data/*.json"
