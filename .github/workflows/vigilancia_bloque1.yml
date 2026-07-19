@@ -22,6 +22,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_CHAT_ID_TECNICO: ${{ secrets.TELEGRAM_CHAT_ID_TECNICO }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python -c "import live_monitor; live_monitor.correr_bloque(max_horas=5.5)"
       - name: Guardar estado persistido
         uses: stefanzweifel/git-auto-commit-action@v5
