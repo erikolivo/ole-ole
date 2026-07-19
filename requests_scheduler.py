@@ -9,6 +9,7 @@ from datetime import datetime
 
 import config
 import fetch_data
+import odds_validation
 
 log = logging.getLogger(__name__)
 
@@ -147,14 +148,29 @@ def revalidar_si_elo_cambio(confirmado: dict) -> dict:
 def guardar_vigilancia_del_dia(confirmados: list) -> None:
     hoy = datetime.utcnow().strftime("%Y-%m-%d")
     vigilancia = [c for c in confirmados if c["clasificacion_is"] != "descartado"]
+    vigilancia = odds_validation.validar_top_partidos_del_dia(vigilancia)   # Fase 2.5
     with open(f"{config.DATA_DIR}/vigilancia_{hoy}.json", "w", encoding="utf-8") as f:
         json.dump(vigilancia, f, ensure_ascii=False, indent=2)
     log.info("Vigilancia de hoy (%s): %d partidos activos, sin tope de cantidad", hoy, len(vigilancia))
 
 
 if __name__ == "__main__":
-    with open(f"{config.DATA_DIR}/candidatos_semana.json", "r", encoding="utf-8") as f:
-        candidatos_semana = json.load(f)
+    ruta_candidatos = f"{config.DATA_DIR}/candidatos_semana.json"
+    try:
+        with open(ruta_candidatos, "r", encoding="utf-8") as f:
+            candidatos_semana = json.load(f)
+    except FileNotFoundError:
+        log.error(
+            "No existe %s todavía. Esto pasa cuando la Fase 1 (seleccion_semanal.yml) "
+            "aún no ha corrido ni una vez, o el archivo no se guardó en el repo. "
+            "Corre primero 'Run workflow' en seleccion_semanal.yml antes de confirmacion_diaria.yml.",
+            ruta_candidatos,
+        )
+        raise SystemExit(0)  # sale limpio, sin traceback, para que el workflow no se vea como un error crítico
+
+    if not candidatos_semana:
+        log.info("candidatos_semana.json existe pero está vacío — no hay partidos que superen el umbral esta semana.")
+        raise SystemExit(0)
 
     plan = planificar_confirmaciones(candidatos_semana)
     confirmados_hoy = ejecutar_confirmaciones_de_hoy(plan, candidatos_semana)

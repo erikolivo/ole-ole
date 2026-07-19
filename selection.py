@@ -1,7 +1,8 @@
 """
 FASE 1 — Selección semanal de favoritos.
-Escanea 7 días de calendario de una sola vez, cruza con Elo (gratis),
-y filtra por UMBRAL de puntaje (no por top-N): si califican 40 partidos, entran los 40.
+Escanea 7 días de calendario de una sola vez. Usa el Elo PROPIO del sistema
+(elo_engine.py), sembrado desde ClubElo cuando es posible, reconstruido
+desde historial cuando no. Filtra por UMBRAL de puntaje (no por top-N).
 """
 import json
 import logging
@@ -9,17 +10,10 @@ from datetime import datetime, timedelta
 
 import config
 import fetch_data
+import elo_engine
 import telegram_utils
 
 log = logging.getLogger(__name__)
-
-with open("team_name_map.json", "r", encoding="utf-8") as f:
-    _RAW_MAP = json.load(f)
-TEAM_NAME_MAP = {k: v for k, v in _RAW_MAP.items() if not k.startswith("_")}
-
-
-def _nombre_en_elo(nombre_api_football: str) -> str:
-    return TEAM_NAME_MAP.get(nombre_api_football, nombre_api_football)
 
 
 def _es_liga_excluida(nombre_liga: str) -> bool:
@@ -27,8 +21,17 @@ def _es_liga_excluida(nombre_liga: str) -> bool:
     return any(palabra in nombre_liga_low for palabra in config.LIGAS_EXCLUIDAS_PALABRAS_CLAVE)
 
 
+def _nombre_clubelo_aproximado(nombre_api_football: str, elo_clubelo: dict) -> str:
+    if nombre_api_football in elo_clubelo:
+        return nombre_api_football
+    nombre_low = nombre_api_football.lower()
+    for nombre_elo in elo_clubelo:
+        if nombre_low == nombre_elo.lower():
+            return nombre_elo
+    return None
+
+
 def _puntaje_elo(diferencia: float) -> float:
-    """Escala lineal simple entre los puntos de referencia del diseño."""
     puntos_referencia = [(0, 0), (50, 20), (100, 30), (150, 35), (200, 40)]
     diferencia = max(0, diferencia)
     if diferencia >= 200:
@@ -40,7 +43,6 @@ def _puntaje_elo(diferencia: float) -> float:
 
 
 def _probabilidad_clubelo(fixtures_clubelo: list, local: str, visitante: str) -> float:
-    """Busca la probabilidad de victoria del local en el CSV de ClubElo /Fixtures."""
     for fila in fixtures_clubelo:
         if fila.get("Home") == local and fila.get("Away") == visitante:
             try:
@@ -51,20 +53,15 @@ def _probabilidad_clubelo(fixtures_clubelo: list, local: str, visitante: str) ->
 
 
 def escanear_semana(fecha_inicio: datetime = None) -> list:
-    """
-    Descarga Elo + calendario de 7 días, cruza nombres, aplica filtro duro,
-    calcula el puntaje de selección y devuelve TODOS los partidos que superan
-    el umbral (sin límite de cantidad).
-    """
     if fecha_inicio is None:
         fecha_inicio = datetime.utcnow()
 
     fecha_elo_str = fecha_inicio.strftime("%Y-%m-%d")
-    elo_dict = fetch_data.descargar_elo_del_dia(fecha_elo_str)
+    elo_clubelo = fetch_data.descargar_elo_del_dia(fecha_elo_str)
     fixtures_clubelo = fetch_data.descargar_probabilidades_fixtures()
 
     candidatos = []
-    sin_cruce = []
+    equipos_reconstruidos = []
 
     for offset in range(config.DIAS_A_ESCANEAR):
         fecha = (fecha_inicio + timedelta(days=offset)).strftime("%Y-%m-%d")
@@ -76,40 +73,46 @@ def escanear_semana(fecha_inicio: datetime = None) -> list:
             if _es_liga_excluida(liga):
                 continue
 
-            local = partido["teams"]["home"]["name"]
-            visitante = partido["teams"]["away"]["name"]
+            local_id = partido["teams"]["home"]["id"]
+            visitante_id = partido["teams"]["away"]["id"]
+            local_nombre = partido["teams"]["home"]["name"]
+            visitante_nombre = partido["teams"]["away"]["name"]
+            liga_id = partido["league"]["id"]
 
-            local_elo_nombre = _nombre_en_elo(local)
-            visitante_elo_nombre = _nombre_en_elo(visitante)
+            nombre_ce_local = _nombre_clubelo_aproximado(local_nombre, elo_clubelo)
+            nombre_ce_visitante = _nombre_clubelo_aproximado(visitante_nombre, elo_clubelo)
 
-            info_local = elo_dict.get(local_elo_nombre)
-            info_visitante = elo_dict.get(visitante_elo_nombre)
+            elo_local = elo_engine.obtener_o_crear_elo(
+                local_id, local_nombre, liga_id, elo_clubelo, nombre_ce_local
+            )
+            elo_visitante = elo_engine.obtener_o_crear_elo(
+                visitante_id, visitante_nombre, liga_id, elo_clubelo, nombre_ce_visitante
+            )
 
-            if info_local is None:
-                sin_cruce.append({"equipo_api_football": local, "nombre_buscado_en_elo": local_elo_nombre, "fecha": fecha})
-            if info_visitante is None:
-                sin_cruce.append({"equipo_api_football": visitante, "nombre_buscado_en_elo": visitante_elo_nombre, "fecha": fecha})
-            if info_local is None or info_visitante is None:
-                continue  # falso negativo controlado: queda logueado, no silencioso
+            if nombre_ce_local is None:
+                equipos_reconstruidos.append(local_nombre)
+            if nombre_ce_visitante is None:
+                equipos_reconstruidos.append(visitante_nombre)
 
-            diff_elo = info_local["elo"] - info_visitante["elo"]
-            favorito, rival, es_local, diff_abs = (
-                (local, visitante, True, diff_elo) if diff_elo >= 0
-                else (visitante, local, False, -diff_elo)
+            diff_elo = elo_local - elo_visitante
+            favorito, rival, favorito_es_local, diff_abs = (
+                (local_nombre, visitante_nombre, True, diff_elo) if diff_elo >= 0
+                else (visitante_nombre, local_nombre, False, -diff_elo)
             )
 
             if diff_abs < config.DIFERENCIA_ELO_MINIMA:
                 continue
 
-            prob_clubelo = _probabilidad_clubelo(fixtures_clubelo, local, visitante)
-            prob_favorito = prob_clubelo if es_local else (1 - prob_clubelo)
+            prob_clubelo = 0.0
+            if nombre_ce_local and nombre_ce_visitante:
+                prob_clubelo = _probabilidad_clubelo(fixtures_clubelo, nombre_ce_local, nombre_ce_visitante)
+            prob_favorito = prob_clubelo if favorito_es_local else (1 - prob_clubelo) if prob_clubelo else 0.5
 
-            nivel_liga = info_local["level"] or info_visitante["level"] or 3
-            puntos_liga = config.PESO_LIGA if nivel_liga == 1 else (8 if nivel_liga == 2 else 3)
+            puntos_liga = config.PESO_LIGA if (nombre_ce_local or nombre_ce_visitante) else 8
 
             puntaje = (
                 _puntaje_elo(diff_abs)
-                + (config.PESO_LOCALIA if es_local == (favorito == local) else 5)
+                + (config.PESO_LOCALIA if favorito_es_local else 5)
                 + prob_favorito * config.PESO_PROB_CLUBELO
                 + puntos_liga
             )
@@ -120,15 +123,17 @@ def escanear_semana(fecha_inicio: datetime = None) -> list:
                     "fecha": fecha,
                     "liga": liga,
                     "favorito": favorito,
+                    "favorito_id": local_id if favorito_es_local else visitante_id,
                     "rival": rival,
-                    "favorito_es_local": (favorito == local),
-                    "elo_favorito": info_local["elo"] if favorito == local else info_visitante["elo"],
-                    "elo_rival": info_visitante["elo"] if favorito == local else info_local["elo"],
+                    "rival_id": visitante_id if favorito_es_local else local_id,
+                    "favorito_es_local": favorito_es_local,
+                    "elo_favorito": elo_local if favorito_es_local else elo_visitante,
+                    "elo_rival": elo_visitante if favorito_es_local else elo_local,
                     "diferencia_elo": diff_abs,
                     "puntaje_seleccion": round(puntaje, 1),
                 })
 
-    _guardar_sin_cruce(sin_cruce, fecha_elo_str)
+    _avisar_reconstrucciones(equipos_reconstruidos, fecha_elo_str)
     candidatos.sort(key=lambda c: c["puntaje_seleccion"], reverse=True)
 
     with open(f"{config.DATA_DIR}/candidatos_semana.json", "w", encoding="utf-8") as f:
@@ -138,18 +143,14 @@ def escanear_semana(fecha_inicio: datetime = None) -> list:
     return candidatos
 
 
-def _guardar_sin_cruce(sin_cruce: list, fecha: str) -> None:
-    if not sin_cruce:
+def _avisar_reconstrucciones(equipos: list, fecha: str) -> None:
+    if not equipos:
         return
-    ruta = f"{config.DATA_DIR}/sin_cruce_{fecha}.json"
-    with open(ruta, "w", encoding="utf-8") as f:
-        json.dump(sin_cruce, f, ensure_ascii=False, indent=2)
-
-    equipos_unicos = sorted({e["equipo_api_football"] for e in sin_cruce})
-    mensaje = f"🔧 Aviso técnico — equipos sin Elo esta semana ({len(equipos_unicos)})\n"
+    equipos_unicos = sorted(set(equipos))
+    mensaje = f"Aviso tecnico: esta semana se calculo Elo propio para {len(equipos_unicos)} equipos nuevos (no estaban en ClubElo)\n"
     mensaje += "\n".join(f"- {eq}" for eq in equipos_unicos[:30])
     if len(equipos_unicos) > 30:
-        mensaje += f"\n... y {len(equipos_unicos) - 30} más (ver {ruta})"
+        mensaje += f"\n... y {len(equipos_unicos) - 30} mas"
     telegram_utils.enviar_aviso_tecnico(mensaje)
 
 
