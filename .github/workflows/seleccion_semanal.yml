@@ -21,6 +21,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TELEGRAM_CHAT_ID_TECNICO: ${{ secrets.TELEGRAM_CHAT_ID_TECNICO }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python selection.py
       - name: Guardar datos generados
         uses: stefanzweifel/git-auto-commit-action@v5
