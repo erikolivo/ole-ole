@@ -137,13 +137,20 @@ def obtener_calendario(fecha: str, forzar: bool = False) -> dict:
     """1 request por día consultado."""
     nombre_archivo = f"fixtures_{fecha}.json"
     if os.path.exists(_ruta(nombre_archivo)) and not forzar:
-        data_cacheada = _leer_json(nombre_archivo)
-        if data_cacheada.get("errors"):
+        try:
+            data_cacheada = _leer_json(nombre_archivo)
+        except (json.JSONDecodeError, ValueError):
+            log.warning("El calendario cacheado de %s esta corrupto o vacio — se vuelve a pedir", fecha)
+            data_cacheada = None
+
+        if data_cacheada is not None and data_cacheada.get("errors"):
             log.warning(
                 "El calendario cacheado de %s tiene un error guardado (%s) — se vuelve a pedir",
                 fecha, data_cacheada["errors"],
             )
-        else:
+            data_cacheada = None
+
+        if data_cacheada is not None:
             log.info("Calendario del %s ya en caché", fecha)
             return data_cacheada
 
