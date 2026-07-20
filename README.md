@@ -1,29 +1,22 @@
-# Sistema de deteccion de favoritos y seguimiento en vivo (v2)
+# Sistema de deteccion de favoritos y seguimiento en vivo (v3)
 
-Implementacion completa del diseno final: Elo propio (semilla ClubElo +
-reconstruccion de historial), seleccion semanal sin tope de partidos,
-banco de requests repartido, vigilancia en vivo con loop interno y LPI
-sin minuto fijo (momentum + 4 ventanas), y validacion cruzada opcional
-con el mercado (the-odds-api).
+Version diaria (no semanal): se descubrio que el plan gratis de
+API-Football NO permite consultar el calendario de dias futuros (solo
+una ventana muy limitada, aparentemente hacia atras) -- por eso la
+seleccion, confirmacion y validacion de mercado se fusionaron en un solo
+script diario (seleccion_diaria.py), que corre una vez al dia antes de
+que arranquen los partidos de HOY.
 
-## Que cambio respecto a la v1
+## Que cambio respecto a la v2
 
-- Elo propio (elo_engine.py): ya no se depende de cruzar nombres con
-  ClubElo cada dia. ClubElo se usa solo como semilla inicial; los equipos
-  que no estan ahi se reconstruyen con sus ultimos 10 partidos (minimo 3)
-  via api-football, y de ahi en adelante el Elo se actualiza solo.
-- LPI sin minuto fijo (lpi_engine.py, live_monitor.py): la ventana
-  temprana se dispara por presion sostenida en sondeos consecutivos, no
-  por un minuto arbitrario. Hay 4 ventanas con distinto umbral (temprana,
-  normal, gol inminente, ultima oportunidad). Se quito xG (no confiable
-  en el plan gratis) y se agrego momentum (comparacion entre sondeos).
-- Sin restriccion de marcador: se vigilan todos los favoritos activos,
-  ganando, empatando o perdiendo -- el mensaje de Telegram distingue la
-  situacion.
-- Fase 2.5 -- validacion de mercado (odds_validation.py): usa
-  the-odds-api (gratis, ~15 consultas/dia) para marcar (coincide con
-  el mercado) o (discrepa) en el mensaje de alerta, sin tocar el
-  puntaje ni el IS.
+- selection.py y requests_scheduler.py se eliminaron y se fusionaron en
+  seleccion_diaria.py -- ya no existe el reparto semanal de requests
+  (no se puede planificar con anticipacion lo que la API no deja ver).
+- Los workflows seleccion_semanal.yml y confirmacion_diaria.yml se
+  reemplazaron por uno solo: seleccion_diaria.yml.
+- Todo lo demas (Elo propio, LPI sin minuto fijo, momentum, 4 ventanas,
+  Fase 2.5 con the-odds-api) sigue igual que en la v2, porque vive en la
+  vigilancia en vivo, que no depende de ver el futuro.
 
 ## Configuracion
 
@@ -32,44 +25,37 @@ Secrets necesarios en GitHub (Settings -> Secrets and variables -> Actions):
 - TELEGRAM_BOT_TOKEN
 - TELEGRAM_CHAT_ID
 - TELEGRAM_CHAT_ID_TECNICO (opcional)
-- ODDS_API_KEY (opcional -- si no se configura, la Fase 2.5 simplemente no marca nada)
+- ODDS_API_KEY (opcional -- registro gratis en the-odds-api.com)
 
-Y en Settings -> Actions -> General -> Workflow permissions: Read and write permissions
-(necesario para que los workflows puedan hacer commit de los datos generados).
+Y en Settings -> Actions -> General -> Workflow permissions: Read and write permissions.
 
 ## Ejecutar manualmente para probar
 
 pip install -r requirements.txt
 
-python selection.py            # Fase 1: seleccion semanal + Elo propio
-python requests_scheduler.py   # Fase 2 + 2.5: confirmacion y validacion de mercado
+python seleccion_diaria.py     # Fase 1+2+2.5: seleccion, confirmacion y validacion de mercado, todo en uno
 python -c "import live_monitor; live_monitor.correr_bloque(max_horas=0.1)"  # Fase 3/4, prueba corta
 
 ## Flujo automatico (GitHub Actions)
 
 | Workflow | Cuando corre | Que hace |
 |---|---|---|
-| seleccion_semanal.yml | 1 vez/semana | Fase 1: Elo propio + escaneo 7 dias, sin tope de partidos |
-| confirmacion_diaria.yml | 1 vez/dia | Fase 2 + 2.5: confirma con /predictions, valida con el mercado |
+| seleccion_diaria.yml | 1 vez/dia, antes de los partidos | Fase 1+2+2.5: Elo propio, filtro por umbral, confirmacion, validacion de mercado |
 | vigilancia_bloque1.yml | 1 vez/dia, inicio de franja | Fase 3/4: loop interno, LPI con momentum y 4 ventanas |
 | vigilancia_bloque2.yml | 1 vez/dia, tras bloque 1 | Retoma estado, cierra el dia, guarda historico |
 
 ## Archivos de datos generados
 
 - data/elo_propio.json -- base de Elo propio, persistente, crece con el tiempo
-- data/candidatos_semana.json -- todos los partidos que pasaron el umbral esta semana
-- data/plan_requests_semana.json -- reparto de confirmaciones por dia
-- data/vigilancia_YYYY-MM-DD.json -- partidos confirmados a vigilar ese dia
+- data/vigilancia_YYYY-MM-DD.json -- partidos confirmados a vigilar ese dia (ya con IS y validacion de mercado)
 - data/estado_vivo_YYYY-MM-DD.json -- estado del loop en vivo (persiste entre bloques)
 - data/historico.sqlite -- historico para calibrar pesos con el tiempo
 
-## Pendiente antes de produccion real
+## Pendiente / cosas a verificar
 
-- Ajustar LIGAS_EXCLUIDAS_PALABRAS_CLAVE en config.py a tu criterio real.
-- Los umbrales de las 4 ventanas del LPI (LPI_UMBRAL_* en config.py) son
-  un punto de partida razonable, no definitivo -- se calibran con historico.sqlite.
-- MOMENTUM_UMBRAL_PRESION y MOMENTUM_SONDEOS_CONSECUTIVOS_REQUERIDOS (ventana
-  temprana) tambien deberian ajustarse una vez que tengas datos reales.
-- El modelo hibrido (Elo + localia + forma con regresion logistica, inspirado en
-  AdamJelley/football-predictions) quedo como mejora futura, no esta implementado
-  todavia -- la seleccion actual sigue usando la formula de puntos fija.
+- Confirmar exactamente que ventana de fechas permite tu plan (se vio que
+  hoy=19 solo dejaba ver 16-18 -- probar si "hoy" mismo y "manana" son
+  accesibles, para saber si conviene ademas escanear 1 dia extra).
+- Ajustar LIGAS_EXCLUIDAS_PALABRAS_CLAVE y los umbrales del LPI con datos reales.
+- El modelo hibrido (Elo + localia + forma con regresion logistica) sigue
+  pendiente como mejora futura, no implementada todavia.
