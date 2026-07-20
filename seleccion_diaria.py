@@ -188,6 +188,8 @@ def ejecutar_seleccion_del_dia(fecha: str = None) -> list:
     with open(f"{config.DATA_DIR}/vigilancia_{fecha}.json", "w", encoding="utf-8") as f:
         json.dump(candidatos, f, ensure_ascii=False, indent=2)
 
+    telegram_utils.enviar_resumen_seleccion_del_dia(candidatos, fecha)
+
     log.info("Seleccion del %s: %d partidos confirmados a vigilar (sin tope de cantidad, requests hoy: %d)",
               fecha, len(candidatos), fetch_data.requests_gastados_hoy())
     return candidatos
