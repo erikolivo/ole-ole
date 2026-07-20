@@ -1,0 +1,30 @@
+name: Selección diaria de favoritos
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # cada día, antes de que empiecen los partidos
+  workflow_dispatch: {}
+
+jobs:
+  seleccion:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+      - name: Ejecutar selección + confirmación + validación de mercado (Fase 1+2+2.5)
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID_TECNICO: ${{ secrets.TELEGRAM_CHAT_ID_TECNICO }}
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python seleccion_diaria.py
+      - name: Guardar datos generados
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Selección diaria automática"
+          file_pattern: "data/*.json data/*.csv"
