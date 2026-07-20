@@ -20,9 +20,11 @@ CLUBELO_BASE_URL = "http://api.clubelo.com"
 # ---------- Rutas de datos ----------
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
-# ---------- Fase 1: Selección semanal ----------
-DIAS_A_ESCANEAR = 7
-UMBRAL_PUNTAJE_SELECCION = 55          # sobre 100, ver selection.py
+# ---------- Fase 1: Selección DIARIA (ya no semanal — ver seleccion_diaria.py) ----------
+# El plan gratis de API-Football no permite consultar el calendario de días
+# futuros, solo una ventana muy limitada — por eso la selección se hace
+# el mismo día, no con una semana de anticipación.
+UMBRAL_PUNTAJE_SELECCION = 55          # sobre 100, ver seleccion_diaria.py
 DIFERENCIA_ELO_MINIMA = 50
 LIGAS_EXCLUIDAS_PALABRAS_CLAVE = [
     "friendlies", "amistoso", "u17", "u18", "u19", "u20", "u21", "u23",
