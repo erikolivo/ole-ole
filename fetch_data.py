@@ -134,13 +134,25 @@ def _get_api_football(endpoint: str, params: dict, timeout: int = 15) -> dict:
 
 
 def obtener_calendario(fecha: str, forzar: bool = False) -> dict:
-    """1 request por día consultado (Fase 1, 7 veces por semana)."""
+    """1 request por día consultado."""
     nombre_archivo = f"fixtures_{fecha}.json"
     if os.path.exists(_ruta(nombre_archivo)) and not forzar:
-        log.info("Calendario del %s ya en caché", fecha)
-        return _leer_json(nombre_archivo)
+        data_cacheada = _leer_json(nombre_archivo)
+        if data_cacheada.get("errors"):
+            log.warning(
+                "El calendario cacheado de %s tiene un error guardado (%s) — se vuelve a pedir",
+                fecha, data_cacheada["errors"],
+            )
+        else:
+            log.info("Calendario del %s ya en caché", fecha)
+            return data_cacheada
 
     data = _get_api_football("fixtures", {"date": fecha})
+
+    if data.get("errors"):
+        log.error("La API devolvió un error para la fecha %s: %s — no se guarda en caché", fecha, data["errors"])
+        return data  # se devuelve igual (con response: []), pero SIN guardarlo como caché válido
+
     _guardar_json(nombre_archivo, data)
     return data
 
