@@ -768,5 +768,1209 @@
     "nombre": "Liverpool Montevideo",
     "liga_id": 268,
     "origen": "semilla_liga"
+  },
+  "1946": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Chaco For Ever",
+    "liga_id": 129,
+    "origen": "semilla_liga"
+  },
+  "8379": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "San Miguel",
+    "liga_id": 129,
+    "origen": "semilla_liga"
+  },
+  "1951": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Central Norte",
+    "liga_id": 129,
+    "origen": "semilla_liga"
+  },
+  "469": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Deportivo Moron",
+    "liga_id": 129,
+    "origen": "semilla_liga"
+  },
+  "21328": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Rizhao Yuqi",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "23286": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Shaanxi Union",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "27620": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Dalian Kewei",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "830": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Beijing Guoan",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "21277": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Tsirang",
+    "liga_id": 1031,
+    "origen": "semilla_liga"
+  },
+  "27725": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Drukpa",
+    "liga_id": 1031,
+    "origen": "semilla_liga"
+  },
+  "19705": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Preston Lions",
+    "liga_id": 874,
+    "origen": "semilla_liga"
+  },
+  "946": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Newcastle Jets",
+    "liga_id": 874,
+    "origen": "semilla_liga"
+  },
+  "10217": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Lions",
+    "liga_id": 874,
+    "origen": "semilla_liga"
+  },
+  "940": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Perth Glory",
+    "liga_id": 874,
+    "origen": "semilla_liga"
+  },
+  "28009": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Coal India",
+    "liga_id": 1020,
+    "origen": "semilla_liga"
+  },
+  "22001": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Aryan",
+    "liga_id": 1020,
+    "origen": "semilla_liga"
+  },
+  "10009": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Cumberland United",
+    "liga_id": 874,
+    "origen": "semilla_liga"
+  },
+  "3803": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Heidelberg United",
+    "liga_id": 874,
+    "origen": "semilla_liga"
+  },
+  "2761": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Jeju United FC",
+    "liga_id": 292,
+    "origen": "semilla_liga"
+  },
+  "2746": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Gangwon FC",
+    "liga_id": 292,
+    "origen": "semilla_liga"
+  },
+  "2762": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Jeonbuk Motors",
+    "liga_id": 292,
+    "origen": "semilla_liga"
+  },
+  "2750": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Daejeon Citizen",
+    "liga_id": 292,
+    "origen": "semilla_liga"
+  },
+  "2767": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Ulsan Hyundai FC",
+    "liga_id": 292,
+    "origen": "semilla_liga"
+  },
+  "2763": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Incheon United",
+    "liga_id": 292,
+    "origen": "semilla_liga"
+  },
+  "3814": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Bayswater City",
+    "liga_id": 874,
+    "origen": "semilla_liga"
+  },
+  "943": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Sydney",
+    "liga_id": 874,
+    "origen": "semilla_liga"
+  },
+  "836": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "SHANGHAI SIPG",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "5686": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Sichuan Jiuniu",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "21262": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Chongqing Tongliang Long",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "17265": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Qingdao Youth Island",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "833": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Shanghai Shenhua",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "1431": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Qingdao Jonoon",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "5695": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Wuhan Three Towns",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "844": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Shandong Luneng",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "840": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Henan Jianye",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "21263": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Dalian Zhixing",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "21265": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Yunnan Yukun",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "5648": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Chengdu Better City",
+    "liga_id": 171,
+    "origen": "semilla_liga"
+  },
+  "5223": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Herentals",
+    "liga_id": 401,
+    "origen": "semilla_liga"
+  },
+  "5227": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Manica Diamonds",
+    "liga_id": 401,
+    "origen": "semilla_liga"
+  },
+  "4577": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Tadamon Sour",
+    "liga_id": 390,
+    "origen": "semilla_liga"
+  },
+  "4572": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Racing",
+    "liga_id": 390,
+    "origen": "semilla_liga"
+  },
+  "4211": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Buxoro",
+    "liga_id": 369,
+    "origen": "semilla_liga"
+  },
+  "4210": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Bunyodkor",
+    "liga_id": 369,
+    "origen": "semilla_liga"
+  },
+  "4220": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Pakhtakor",
+    "liga_id": 369,
+    "origen": "semilla_liga"
+  },
+  "16381": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Xorazm",
+    "liga_id": 369,
+    "origen": "semilla_liga"
+  },
+  "4223": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Sogdiana",
+    "liga_id": 369,
+    "origen": "semilla_liga"
+  },
+  "4217": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Neftchi",
+    "liga_id": 369,
+    "origen": "semilla_liga"
+  },
+  "9187": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "KäPa",
+    "liga_id": 1087,
+    "origen": "semilla_liga"
+  },
+  "2085": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Klubi-04",
+    "liga_id": 1087,
+    "origen": "semilla_liga"
+  },
+  "23156": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Hegelmann II",
+    "liga_id": 361,
+    "origen": "semilla_liga"
+  },
+  "3871": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Žalgiris II",
+    "liga_id": 361,
+    "origen": "semilla_liga"
+  },
+  "3683": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Ararat-Armenia",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "652": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Shamrock Rovers",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "3502": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Saburtalo",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "656": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Slovan Bratislava",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "2240": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Mjallby AIF",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "667": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Lincoln Red Imps FC",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "13976": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Sabah FA",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "1165": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "KuPS",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "14302": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Kompanii Marjamaa",
+    "liga_id": 657,
+    "origen": "semilla_liga"
+  },
+  "27854": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Generation Tallinn",
+    "liga_id": 657,
+    "origen": "semilla_liga"
+  },
+  "12757": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Eintracht Bamberg",
+    "liga_id": 938,
+    "origen": "semilla_liga"
+  },
+  "19760": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Weiden",
+    "liga_id": 938,
+    "origen": "semilla_liga"
+  },
+  "12807": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Kottern",
+    "liga_id": 939,
+    "origen": "semilla_liga"
+  },
+  "12850": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Schwabmünchen",
+    "liga_id": 939,
+    "origen": "semilla_liga"
+  },
+  "12832": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Pipinsried",
+    "liga_id": 939,
+    "origen": "semilla_liga"
+  },
+  "9329": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Heimstetten",
+    "liga_id": 939,
+    "origen": "semilla_liga"
+  },
+  "9322": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "1860 Rosenheim",
+    "liga_id": 939,
+    "origen": "semilla_liga"
+  },
+  "9334": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Schalding-Heining",
+    "liga_id": 939,
+    "origen": "semilla_liga"
+  },
+  "12796": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Ismaning",
+    "liga_id": 939,
+    "origen": "semilla_liga"
+  },
+  "27899": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Pfaffenhofen",
+    "liga_id": 939,
+    "origen": "semilla_liga"
+  },
+  "812": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Falkenbergs FF",
+    "liga_id": 114,
+    "origen": "semilla_liga"
+  },
+  "811": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Helsingborg",
+    "liga_id": 114,
+    "origen": "semilla_liga"
+  },
+  "406": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Aarhus",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "347": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Lech Poznan",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "17027": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "DJK Bamberg",
+    "liga_id": 938,
+    "origen": "semilla_liga"
+  },
+  "19759": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Kornburg",
+    "liga_id": 938,
+    "origen": "semilla_liga"
+  },
+  "21526": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Neudrossenfeld",
+    "liga_id": 938,
+    "origen": "semilla_liga"
+  },
+  "19226": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Fortuna Regensburg",
+    "liga_id": 938,
+    "origen": "semilla_liga"
+  },
+  "12774": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Großbardorf",
+    "liga_id": 938,
+    "origen": "semilla_liga"
+  },
+  "12898": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Würzburger FV",
+    "liga_id": 938,
+    "origen": "semilla_liga"
+  },
+  "18995": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Tabasalu Ulasabat",
+    "liga_id": 657,
+    "origen": "semilla_liga"
+  },
+  "3525": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Vaprus",
+    "liga_id": 657,
+    "origen": "semilla_liga"
+  },
+  "366": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "IFK Goteborg",
+    "liga_id": 848,
+    "origen": "semilla_liga"
+  },
+  "2273": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "FC Levadia Tallinn",
+    "liga_id": 848,
+    "origen": "semilla_liga"
+  },
+  "14304": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Kristiine JK",
+    "liga_id": 657,
+    "origen": "semilla_liga"
+  },
+  "14298": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Jõgeva Wolves",
+    "liga_id": 657,
+    "origen": "semilla_liga"
+  },
+  "4625": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Floriana",
+    "liga_id": 848,
+    "origen": "semilla_liga"
+  },
+  "14281": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Drita",
+    "liga_id": 848,
+    "origen": "semilla_liga"
+  },
+  "482": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Almagro",
+    "liga_id": 129,
+    "origen": "semilla_liga"
+  },
+  "1928": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Gimnasia Y Tiro",
+    "liga_id": 129,
+    "origen": "semilla_liga"
+  },
+  "8391": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Claypole",
+    "liga_id": 132,
+    "origen": "semilla_liga"
+  },
+  "486": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Juventud Unida",
+    "liga_id": 132,
+    "origen": "semilla_liga"
+  },
+  "23568": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Sport Brasil ES",
+    "liga_id": 1147,
+    "origen": "semilla_liga"
+  },
+  "25011": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Tupy",
+    "liga_id": 1147,
+    "origen": "semilla_liga"
+  },
+  "611": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Fenerbahçe",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "340": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Gornik Zabrze",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "1012": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "FC Thun",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "620": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Dinamo Zagreb",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "3454": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Olympique Dcheïra",
+    "liga_id": 200,
+    "origen": "semilla_liga"
+  },
+  "18753": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Amal Tiznit",
+    "liga_id": 200,
+    "origen": "semilla_liga"
+  },
+  "14806": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "UTS Rabat",
+    "liga_id": 200,
+    "origen": "semilla_liga"
+  },
+  "3451": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "El Massira",
+    "liga_id": 200,
+    "origen": "semilla_liga"
+  },
+  "15847": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Atert Bissen",
+    "liga_id": 848,
+    "origen": "semilla_liga"
+  },
+  "2402": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Gyori ETO FC",
+    "liga_id": 848,
+    "origen": "semilla_liga"
+  },
+  "634": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Botev Plovdiv",
+    "liga_id": 172,
+    "origen": "semilla_liga"
+  },
+  "1416": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Lokomotiv Sofia",
+    "liga_id": 172,
+    "origen": "semilla_liga"
+  },
+  "637": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Sturm Graz",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "254": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Heart Of Midlothian",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "1391": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Alloa Athletic",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "1389": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Falkirk",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "4249": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Arbroath",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "4251": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Montrose",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6762": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Clyde",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6757": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Annan Athletic",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "1386": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Dundee Utd",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6781": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Spartans",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "1388": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Dunfermline",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6763": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Cove Rangers",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6764": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "East Fife",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6744": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Linlithgow Rose",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "903": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Inverness CT",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "258": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "ST Johnstone",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6773": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Kelty Hearts",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6760": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Brora Rangers",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "250": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Kilmarnock",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "248": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Hamilton Academical",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "255": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Livingston",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "4250": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Forfar Athletic",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "901": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Partick",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6784": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Stenhousemuir",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "1385": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Raith Rovers",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6777": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Peterhead",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "902": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Ross County",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "253": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Dundee",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "251": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "ST Mirren",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6765": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "East Kilbride",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6785": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Stranraer",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "6766": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Edinburgh City",
+    "liga_id": 185,
+    "origen": "semilla_liga"
+  },
+  "701": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "KI Klaksvik",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "3872": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Kauno Žalgiris",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "5354": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Larne",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "598": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "FK Crvena Zvezda",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "278": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Vikingur Reykjavik",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "563": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Hapoel Beer Sheva",
+    "liga_id": 2,
+    "origen": "semilla_liga"
+  },
+  "267": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Fylkir",
+    "liga_id": 167,
+    "origen": "semilla_liga"
+  },
+  "3514": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Afturelding",
+    "liga_id": 167,
+    "origen": "semilla_liga"
+  },
+  "1139": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Santa Fe",
+    "liga_id": 241,
+    "origen": "semilla_liga"
+  },
+  "1465": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Union Magdalena",
+    "liga_id": 241,
+    "origen": "semilla_liga"
+  },
+  "473": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Independ. Rivadavia",
+    "liga_id": 810,
+    "origen": "semilla_liga"
+  },
+  "450": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Estudiantes L.P.",
+    "liga_id": 810,
+    "origen": "semilla_liga"
+  },
+  "1137": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Atletico Nacional",
+    "liga_id": 241,
+    "origen": "semilla_liga"
+  },
+  "1145": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Tigres FC",
+    "liga_id": 241,
+    "origen": "semilla_liga"
+  },
+  "18762": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Libertad",
+    "liga_id": 242,
+    "origen": "semilla_liga"
+  },
+  "1149": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Delfin SC",
+    "liga_id": 242,
+    "origen": "semilla_liga"
+  },
+  "1929": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Deportivo Madryn",
+    "liga_id": 129,
+    "origen": "semilla_liga"
+  },
+  "439": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Godoy Cruz",
+    "liga_id": 129,
+    "origen": "semilla_liga"
+  },
+  "1134": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Internacional de Bogota",
+    "liga_id": 241,
+    "origen": "semilla_liga"
+  },
+  "23326": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Internacional Palmira",
+    "liga_id": 241,
+    "origen": "semilla_liga"
+  },
+  "2356": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Club Nacional",
+    "liga_id": 11,
+    "origen": "semilla_liga"
+  },
+  "452": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Tigre",
+    "liga_id": 11,
+    "origen": "semilla_liga"
+  },
+  "1062": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Atletico-MG",
+    "liga_id": 71,
+    "origen": "semilla_liga"
+  },
+  "118": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Bahia",
+    "liga_id": 71,
+    "origen": "semilla_liga"
+  },
+  "145": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Avai",
+    "liga_id": 72,
+    "origen": "semilla_liga"
+  },
+  "125": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "America Mineiro",
+    "liga_id": 72,
+    "origen": "semilla_liga"
+  },
+  "7834": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Novorizontino",
+    "liga_id": 72,
+    "origen": "semilla_liga"
+  },
+  "140": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Criciuma",
+    "liga_id": 72,
+    "origen": "semilla_liga"
+  },
+  "15702": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Independiente Petrolero",
+    "liga_id": 344,
+    "origen": "semilla_liga"
+  },
+  "3708": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Real Potosí",
+    "liga_id": 344,
+    "origen": "semilla_liga"
+  },
+  "1142": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Deportes Tolima",
+    "liga_id": 241,
+    "origen": "semilla_liga"
+  },
+  "1461": {
+    "elo": 1727.9404150387002,
+    "partidos_jugados": 0,
+    "nombre": "Quindio",
+    "liga_id": 241,
+    "origen": "semilla_liga"
   }
 }
