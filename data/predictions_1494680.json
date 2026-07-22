@@ -1,0 +1,1405 @@
+{
+  "get": "predictions",
+  "parameters": {
+    "fixture": "1494680"
+  },
+  "errors": [],
+  "results": 1,
+  "paging": {
+    "current": 1,
+    "total": 1
+  },
+  "response": [
+    {
+      "predictions": {
+        "winner": {
+          "id": 759,
+          "name": "Viking",
+          "comment": "Win or draw"
+        },
+        "win_or_draw": true,
+        "under_over": null,
+        "goals": {
+          "home": "-2.5",
+          "away": "-2.5"
+        },
+        "advice": "Double chance : draw or Viking",
+        "percent": {
+          "home": "10%",
+          "draw": "45%",
+          "away": "45%"
+        }
+      },
+      "league": {
+        "id": 103,
+        "name": "Eliteserien",
+        "country": "Norway",
+        "logo": "https://media.api-sports.io/football/leagues/103.png",
+        "flag": "https://media.api-sports.io/flags/no.svg",
+        "season": 2026
+      },
+      "teams": {
+        "home": {
+          "id": 321,
+          "name": "Lillestrom",
+          "logo": "https://media.api-sports.io/football/teams/321.png",
+          "last_5": {
+            "played": 5,
+            "form": "60%",
+            "att": "67%",
+            "def": "50%",
+            "goals": {
+              "for": {
+                "total": 8,
+                "average": "1.6"
+              },
+              "against": {
+                "total": 6,
+                "average": "1.2"
+              }
+            }
+          },
+          "league": {
+            "form": "WWWDWLWLWLLWW",
+            "fixtures": {
+              "played": {
+                "home": 6,
+                "away": 7,
+                "total": 13
+              },
+              "wins": {
+                "home": 4,
+                "away": 4,
+                "total": 8
+              },
+              "draws": {
+                "home": 0,
+                "away": 1,
+                "total": 1
+              },
+              "loses": {
+                "home": 2,
+                "away": 2,
+                "total": 4
+              }
+            },
+            "goals": {
+              "for": {
+                "total": {
+                  "home": 13,
+                  "away": 8,
+                  "total": 21
+                },
+                "average": {
+                  "home": "2.2",
+                  "away": "1.1",
+                  "total": "1.6"
+                },
+                "minute": {
+                  "0-15": {
+                    "total": 4,
+                    "percentage": "19.05%"
+                  },
+                  "16-30": {
+                    "total": 2,
+                    "percentage": "9.52%"
+                  },
+                  "31-45": {
+                    "total": 1,
+                    "percentage": "4.76%"
+                  },
+                  "46-60": {
+                    "total": 3,
+                    "percentage": "14.29%"
+                  },
+                  "61-75": {
+                    "total": 3,
+                    "percentage": "14.29%"
+                  },
+                  "76-90": {
+                    "total": 8,
+                    "percentage": "38.10%"
+                  },
+                  "91-105": {
+                    "total": null,
+                    "percentage": null
+                  },
+                  "106-120": {
+                    "total": null,
+                    "percentage": null
+                  }
+                },
+                "under_over": {
+                  "0.5": {
+                    "over": 9,
+                    "under": 4
+                  },
+                  "1.5": {
+                    "over": 7,
+                    "under": 6
+                  },
+                  "2.5": {
+                    "over": 4,
+                    "under": 9
+                  },
+                  "3.5": {
+                    "over": 1,
+                    "under": 12
+                  },
+                  "4.5": {
+                    "over": 0,
+                    "under": 13
+                  }
+                }
+              },
+              "against": {
+                "total": {
+                  "home": 7,
+                  "away": 5,
+                  "total": 12
+                },
+                "average": {
+                  "home": "1.2",
+                  "away": "0.7",
+                  "total": "0.9"
+                },
+                "minute": {
+                  "0-15": {
+                    "total": 4,
+                    "percentage": "33.33%"
+                  },
+                  "16-30": {
+                    "total": 2,
+                    "percentage": "16.67%"
+                  },
+                  "31-45": {
+                    "total": 1,
+                    "percentage": "8.33%"
+                  },
+                  "46-60": {
+                    "total": 3,
+                    "percentage": "25.00%"
+                  },
+                  "61-75": {
+                    "total": null,
+                    "percentage": null
+                  },
+                  "76-90": {
+                    "total": 2,
+                    "percentage": "16.67%"
+                  },
+                  "91-105": {
+                    "total": null,
+                    "percentage": null
+                  },
+                  "106-120": {
+                    "total": null,
+                    "percentage": null
+                  }
+                },
+                "under_over": {
+                  "0.5": {
+                    "over": 8,
+                    "under": 5
+                  },
+                  "1.5": {
+                    "over": 4,
+                    "under": 9
+                  },
+                  "2.5": {
+                    "over": 0,
+                    "under": 13
+                  },
+                  "3.5": {
+                    "over": 0,
+                    "under": 13
+                  },
+                  "4.5": {
+                    "over": 0,
+                    "under": 13
+                  }
+                }
+              }
+            },
+            "biggest": {
+              "streak": {
+                "wins": 3,
+                "draws": 1,
+                "loses": 2
+              },
+              "wins": {
+                "home": "4-0",
+                "away": "1-3"
+              },
+              "loses": {
+                "home": "0-2",
+                "away": "2-0"
+              },
+              "goals": {
+                "for": {
+                  "home": 4,
+                  "away": 3
+                },
+                "against": {
+                  "home": 2,
+                  "away": 2
+                }
+              }
+            },
+            "clean_sheet": {
+              "home": 1,
+              "away": 4,
+              "total": 5
+            },
+            "failed_to_score": {
+              "home": 1,
+              "away": 3,
+              "total": 4
+            },
+            "penalty": {
+              "scored": {
+                "total": 2,
+                "percentage": "66.67%"
+              },
+              "missed": {
+                "total": 1,
+                "percentage": "33.33%"
+              },
+              "total": 3
+            },
+            "lineups": [
+              {
+                "formation": "4-1-4-1",
+                "played": 12
+              },
+              {
+                "formation": "4-3-3",
+                "played": 1
+              }
+            ],
+            "cards": {
+              "yellow": {
+                "0-15": {
+                  "total": 1,
+                  "percentage": "4.76%"
+                },
+                "16-30": {
+                  "total": 3,
+                  "percentage": "14.29%"
+                },
+                "31-45": {
+                  "total": 2,
+                  "percentage": "9.52%"
+                },
+                "46-60": {
+                  "total": 3,
+                  "percentage": "14.29%"
+                },
+                "61-75": {
+                  "total": 3,
+                  "percentage": "14.29%"
+                },
+                "76-90": {
+                  "total": 2,
+                  "percentage": "9.52%"
+                },
+                "91-105": {
+                  "total": 7,
+                  "percentage": "33.33%"
+                },
+                "106-120": {
+                  "total": null,
+                  "percentage": null
+                }
+              },
+              "red": {
+                "0-15": {
+                  "total": null,
+                  "percentage": null
+                },
+                "16-30": {
+                  "total": null,
+                  "percentage": null
+                },
+                "31-45": {
+                  "total": null,
+                  "percentage": null
+                },
+                "46-60": {
+                  "total": 1,
+                  "percentage": "50.00%"
+                },
+                "61-75": {
+                  "total": 1,
+                  "percentage": "50.00%"
+                },
+                "76-90": {
+                  "total": null,
+                  "percentage": null
+                },
+                "91-105": {
+                  "total": null,
+                  "percentage": null
+                },
+                "106-120": {
+                  "total": null,
+                  "percentage": null
+                }
+              }
+            }
+          }
+        },
+        "away": {
+          "id": 759,
+          "name": "Viking",
+          "logo": "https://media.api-sports.io/football/teams/759.png",
+          "last_5": {
+            "played": 5,
+            "form": "80%",
+            "att": "100%",
+            "def": "50%",
+            "goals": {
+              "for": {
+                "total": 12,
+                "average": "2.4"
+              },
+              "against": {
+                "total": 6,
+                "average": "1.2"
+              }
+            }
+          },
+          "league": {
+            "form": "LWWWWWWWWWLW",
+            "fixtures": {
+              "played": {
+                "home": 6,
+                "away": 6,
+                "total": 12
+              },
+              "wins": {
+                "home": 6,
+                "away": 4,
+                "total": 10
+              },
+              "draws": {
+                "home": 0,
+                "away": 0,
+                "total": 0
+              },
+              "loses": {
+                "home": 0,
+                "away": 2,
+                "total": 2
+              }
+            },
+            "goals": {
+              "for": {
+                "total": {
+                  "home": 23,
+                  "away": 8,
+                  "total": 31
+                },
+                "average": {
+                  "home": "3.8",
+                  "away": "1.3",
+                  "total": "2.6"
+                },
+                "minute": {
+                  "0-15": {
+                    "total": 9,
+                    "percentage": "29.03%"
+                  },
+                  "16-30": {
+                    "total": 2,
+                    "percentage": "6.45%"
+                  },
+                  "31-45": {
+                    "total": 6,
+                    "percentage": "19.35%"
+                  },
+                  "46-60": {
+                    "total": 4,
+                    "percentage": "12.90%"
+                  },
+                  "61-75": {
+                    "total": 5,
+                    "percentage": "16.13%"
+                  },
+                  "76-90": {
+                    "total": 5,
+                    "percentage": "16.13%"
+                  },
+                  "91-105": {
+                    "total": null,
+                    "percentage": null
+                  },
+                  "106-120": {
+                    "total": null,
+                    "percentage": null
+                  }
+                },
+                "under_over": {
+                  "0.5": {
+                    "over": 11,
+                    "under": 1
+                  },
+                  "1.5": {
+                    "over": 9,
+                    "under": 3
+                  },
+                  "2.5": {
+                    "over": 5,
+                    "under": 7
+                  },
+                  "3.5": {
+                    "over": 3,
+                    "under": 9
+                  },
+                  "4.5": {
+                    "over": 2,
+                    "under": 10
+                  }
+                }
+              },
+              "against": {
+                "total": {
+                  "home": 7,
+                  "away": 5,
+                  "total": 12
+                },
+                "average": {
+                  "home": "1.2",
+                  "away": "0.8",
+                  "total": "1.0"
+                },
+                "minute": {
+                  "0-15": {
+                    "total": 2,
+                    "percentage": "16.67%"
+                  },
+                  "16-30": {
+                    "total": 1,
+                    "percentage": "8.33%"
+                  },
+                  "31-45": {
+                    "total": 5,
+                    "percentage": "41.67%"
+                  },
+                  "46-60": {
+                    "total": 2,
+                    "percentage": "16.67%"
+                  },
+                  "61-75": {
+                    "total": 1,
+                    "percentage": "8.33%"
+                  },
+                  "76-90": {
+                    "total": 1,
+                    "percentage": "8.33%"
+                  },
+                  "91-105": {
+                    "total": null,
+                    "percentage": null
+                  },
+                  "106-120": {
+                    "total": null,
+                    "percentage": null
+                  }
+                },
+                "under_over": {
+                  "0.5": {
+                    "over": 8,
+                    "under": 4
+                  },
+                  "1.5": {
+                    "over": 3,
+                    "under": 9
+                  },
+                  "2.5": {
+                    "over": 1,
+                    "under": 11
+                  },
+                  "3.5": {
+                    "over": 0,
+                    "under": 12
+                  },
+                  "4.5": {
+                    "over": 0,
+                    "under": 12
+                  }
+                }
+              }
+            },
+            "biggest": {
+              "streak": {
+                "wins": 9,
+                "draws": 0,
+                "loses": 1
+              },
+              "wins": {
+                "home": "5-0",
+                "away": "0-2"
+              },
+              "loses": {
+                "home": null,
+                "away": "2-1"
+              },
+              "goals": {
+                "for": {
+                  "home": 6,
+                  "away": 2
+                },
+                "against": {
+                  "home": 3,
+                  "away": 2
+                }
+              }
+            },
+            "clean_sheet": {
+              "home": 2,
+              "away": 2,
+              "total": 4
+            },
+            "failed_to_score": {
+              "home": 0,
+              "away": 1,
+              "total": 1
+            },
+            "penalty": {
+              "scored": {
+                "total": 1,
+                "percentage": "100.00%"
+              },
+              "missed": {
+                "total": 0,
+                "percentage": "0%"
+              },
+              "total": 1
+            },
+            "lineups": [
+              {
+                "formation": "4-1-4-1",
+                "played": 7
+              },
+              {
+                "formation": "4-4-2",
+                "played": 4
+              },
+              {
+                "formation": "4-5-1",
+                "played": 1
+              }
+            ],
+            "cards": {
+              "yellow": {
+                "0-15": {
+                  "total": 2,
+                  "percentage": "7.41%"
+                },
+                "16-30": {
+                  "total": 1,
+                  "percentage": "3.70%"
+                },
+                "31-45": {
+                  "total": 1,
+                  "percentage": "3.70%"
+                },
+                "46-60": {
+                  "total": 5,
+                  "percentage": "18.52%"
+                },
+                "61-75": {
+                  "total": 7,
+                  "percentage": "25.93%"
+                },
+                "76-90": {
+                  "total": 6,
+                  "percentage": "22.22%"
+                },
+                "91-105": {
+                  "total": 3,
+                  "percentage": "11.11%"
+                },
+                "106-120": {
+                  "total": null,
+                  "percentage": null
+                },
+                "": {
+                  "total": 2,
+                  "percentage": "7.41%"
+                }
+              },
+              "red": {
+                "0-15": {
+                  "total": null,
+                  "percentage": null
+                },
+                "16-30": {
+                  "total": null,
+                  "percentage": null
+                },
+                "31-45": {
+                  "total": null,
+                  "percentage": null
+                },
+                "46-60": {
+                  "total": null,
+                  "percentage": null
+                },
+                "61-75": {
+                  "total": null,
+                  "percentage": null
+                },
+                "76-90": {
+                  "total": null,
+                  "percentage": null
+                },
+                "91-105": {
+                  "total": null,
+                  "percentage": null
+                },
+                "106-120": {
+                  "total": null,
+                  "percentage": null
+                }
+              }
+            }
+          }
+        }
+      },
+      "comparison": {
+        "form": {
+          "home": "43%",
+          "away": "57%"
+        },
+        "att": {
+          "home": "40%",
+          "away": "60%"
+        },
+        "def": {
+          "home": "50%",
+          "away": "50%"
+        },
+        "poisson_distribution": {
+          "home": "43%",
+          "away": "57%"
+        },
+        "h2h": {
+          "home": "29%",
+          "away": "71%"
+        },
+        "goals": {
+          "home": "40%",
+          "away": "60%"
+        },
+        "total": {
+          "home": "40.8%",
+          "away": "59.2%"
+        }
+      },
+      "h2h": [
+        {
+          "fixture": {
+            "id": 1164506,
+            "referee": "S. Sinnes",
+            "timezone": "UTC",
+            "date": "2024-09-29T15:00:00+00:00",
+            "timestamp": 1727622000,
+            "periods": {
+              "first": 1727622000,
+              "second": 1727625600
+            },
+            "venue": {
+              "id": 1182,
+              "name": "Åråsen Stadion",
+              "city": "Kjeller"
+            },
+            "status": {
+              "long": "Match Finished",
+              "short": "FT",
+              "elapsed": 90,
+              "extra": 5
+            }
+          },
+          "league": {
+            "id": 103,
+            "name": "Eliteserien",
+            "country": "Norway",
+            "logo": "https://media.api-sports.io/football/leagues/103.png",
+            "flag": "https://media.api-sports.io/flags/no.svg",
+            "season": 2024,
+            "round": "Regular Season - 24",
+            "standings": true
+          },
+          "teams": {
+            "home": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": false
+            },
+            "away": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": true
+            }
+          },
+          "goals": {
+            "home": 1,
+            "away": 4
+          },
+          "score": {
+            "halftime": {
+              "home": 0,
+              "away": 1
+            },
+            "fulltime": {
+              "home": 1,
+              "away": 4
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": null,
+              "away": null
+            }
+          }
+        },
+        {
+          "fixture": {
+            "id": 1164379,
+            "referee": "S. Amland",
+            "timezone": "UTC",
+            "date": "2024-05-16T16:00:00+00:00",
+            "timestamp": 1715875200,
+            "periods": {
+              "first": 1715875200,
+              "second": 1715878800
+            },
+            "venue": {
+              "id": 1204,
+              "name": "SR-Bank Arena",
+              "city": "Stavanger"
+            },
+            "status": {
+              "long": "Match Finished",
+              "short": "FT",
+              "elapsed": 90,
+              "extra": null
+            }
+          },
+          "league": {
+            "id": 103,
+            "name": "Eliteserien",
+            "country": "Norway",
+            "logo": "https://media.api-sports.io/football/leagues/103.png",
+            "flag": "https://media.api-sports.io/flags/no.svg",
+            "season": 2024,
+            "round": "Regular Season - 8",
+            "standings": true
+          },
+          "teams": {
+            "home": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": false
+            },
+            "away": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": true
+            }
+          },
+          "goals": {
+            "home": 1,
+            "away": 4
+          },
+          "score": {
+            "halftime": {
+              "home": 0,
+              "away": 3
+            },
+            "fulltime": {
+              "home": 1,
+              "away": 4
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": null,
+              "away": null
+            }
+          }
+        },
+        {
+          "fixture": {
+            "id": 1001705,
+            "referee": "R. Saggi",
+            "timezone": "UTC",
+            "date": "2023-08-13T15:00:00+00:00",
+            "timestamp": 1691938800,
+            "periods": {
+              "first": 1691938800,
+              "second": 1691942400
+            },
+            "venue": {
+              "id": 1182,
+              "name": "Åråsen Stadion",
+              "city": "Kjeller"
+            },
+            "status": {
+              "long": "Match Finished",
+              "short": "FT",
+              "elapsed": 90,
+              "extra": null
+            }
+          },
+          "league": {
+            "id": 103,
+            "name": "Eliteserien",
+            "country": "Norway",
+            "logo": "https://media.api-sports.io/football/leagues/103.png",
+            "flag": "https://media.api-sports.io/flags/no.svg",
+            "season": 2023,
+            "round": "Regular Season - 18",
+            "standings": true
+          },
+          "teams": {
+            "home": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": false
+            },
+            "away": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": true
+            }
+          },
+          "goals": {
+            "home": 1,
+            "away": 3
+          },
+          "score": {
+            "halftime": {
+              "home": 0,
+              "away": 0
+            },
+            "fulltime": {
+              "home": 1,
+              "away": 3
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": null,
+              "away": null
+            }
+          }
+        },
+        {
+          "fixture": {
+            "id": 1001575,
+            "referee": "M. Aslam",
+            "timezone": "UTC",
+            "date": "2023-04-15T16:00:00+00:00",
+            "timestamp": 1681574400,
+            "periods": {
+              "first": 1681574400,
+              "second": 1681578000
+            },
+            "venue": {
+              "id": 1204,
+              "name": "SR-Bank Arena",
+              "city": "Stavanger"
+            },
+            "status": {
+              "long": "Match Finished",
+              "short": "FT",
+              "elapsed": 90,
+              "extra": null
+            }
+          },
+          "league": {
+            "id": 103,
+            "name": "Eliteserien",
+            "country": "Norway",
+            "logo": "https://media.api-sports.io/football/leagues/103.png",
+            "flag": "https://media.api-sports.io/flags/no.svg",
+            "season": 2023,
+            "round": "Regular Season - 2",
+            "standings": true
+          },
+          "teams": {
+            "home": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": true
+            },
+            "away": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": false
+            }
+          },
+          "goals": {
+            "home": 2,
+            "away": 0
+          },
+          "score": {
+            "halftime": {
+              "home": 0,
+              "away": 0
+            },
+            "fulltime": {
+              "home": 2,
+              "away": 0
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": null,
+              "away": null
+            }
+          }
+        },
+        {
+          "fixture": {
+            "id": 992111,
+            "referee": null,
+            "timezone": "UTC",
+            "date": "2023-02-26T12:00:00+00:00",
+            "timestamp": 1677412800,
+            "periods": {
+              "first": 1677412800,
+              "second": 1677416400
+            },
+            "venue": {
+              "id": null,
+              "name": "Marbella Football Center - Norte 1",
+              "city": "San Pedro de Alcántara"
+            },
+            "status": {
+              "long": "Match Finished",
+              "short": "PEN",
+              "elapsed": 120,
+              "extra": null
+            }
+          },
+          "league": {
+            "id": 667,
+            "name": "Friendlies Clubs",
+            "country": "World",
+            "logo": "https://media.api-sports.io/football/leagues/667.png",
+            "flag": null,
+            "season": 2023,
+            "round": "Club Friendlies 3",
+            "standings": false
+          },
+          "teams": {
+            "home": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": false
+            },
+            "away": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": true
+            }
+          },
+          "goals": {
+            "home": 2,
+            "away": 2
+          },
+          "score": {
+            "halftime": {
+              "home": 0,
+              "away": 0
+            },
+            "fulltime": {
+              "home": 2,
+              "away": 2
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": 0,
+              "away": 1
+            }
+          }
+        },
+        {
+          "fixture": {
+            "id": 831203,
+            "referee": "E. Eskås",
+            "timezone": "UTC",
+            "date": "2022-10-09T15:00:00+00:00",
+            "timestamp": 1665327600,
+            "periods": {
+              "first": 1665327600,
+              "second": 1665331200
+            },
+            "venue": {
+              "id": 1204,
+              "name": "SR-Bank Arena",
+              "city": "Stavanger"
+            },
+            "status": {
+              "long": "Match Finished",
+              "short": "FT",
+              "elapsed": 90,
+              "extra": null
+            }
+          },
+          "league": {
+            "id": 103,
+            "name": "Eliteserien",
+            "country": "Norway",
+            "logo": "https://media.api-sports.io/football/leagues/103.png",
+            "flag": "https://media.api-sports.io/flags/no.svg",
+            "season": 2022,
+            "round": "Regular Season - 25",
+            "standings": true
+          },
+          "teams": {
+            "home": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": false
+            },
+            "away": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": true
+            }
+          },
+          "goals": {
+            "home": 0,
+            "away": 3
+          },
+          "score": {
+            "halftime": {
+              "home": 0,
+              "away": 1
+            },
+            "fulltime": {
+              "home": 0,
+              "away": 3
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": null,
+              "away": null
+            }
+          }
+        },
+        {
+          "fixture": {
+            "id": 831101,
+            "referee": "K. Hagenes",
+            "timezone": "UTC",
+            "date": "2022-07-10T16:00:00+00:00",
+            "timestamp": 1657468800,
+            "periods": {
+              "first": 1657468800,
+              "second": 1657472400
+            },
+            "venue": {
+              "id": 1182,
+              "name": "Åråsen Stadion",
+              "city": "Kjeller"
+            },
+            "status": {
+              "long": "Match Finished",
+              "short": "FT",
+              "elapsed": 90,
+              "extra": null
+            }
+          },
+          "league": {
+            "id": 103,
+            "name": "Eliteserien",
+            "country": "Norway",
+            "logo": "https://media.api-sports.io/football/leagues/103.png",
+            "flag": "https://media.api-sports.io/flags/no.svg",
+            "season": 2022,
+            "round": "Regular Season - 13",
+            "standings": true
+          },
+          "teams": {
+            "home": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": false
+            },
+            "away": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": true
+            }
+          },
+          "goals": {
+            "home": 0,
+            "away": 1
+          },
+          "score": {
+            "halftime": {
+              "home": 0,
+              "away": 0
+            },
+            "fulltime": {
+              "home": 0,
+              "away": 1
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": null,
+              "away": null
+            }
+          }
+        },
+        {
+          "fixture": {
+            "id": 699344,
+            "referee": "T. Hagen",
+            "timezone": "UTC",
+            "date": "2021-10-23T14:00:00+00:00",
+            "timestamp": 1634997600,
+            "periods": {
+              "first": 1634997600,
+              "second": 1635001200
+            },
+            "venue": {
+              "id": 1204,
+              "name": "SR-Bank Arena",
+              "city": "Stavanger"
+            },
+            "status": {
+              "long": "Match Finished",
+              "short": "FT",
+              "elapsed": 90,
+              "extra": null
+            }
+          },
+          "league": {
+            "id": 103,
+            "name": "Eliteserien",
+            "country": "Norway",
+            "logo": "https://media.api-sports.io/football/leagues/103.png",
+            "flag": "https://media.api-sports.io/flags/no.svg",
+            "season": 2021,
+            "round": "Regular Season - 23",
+            "standings": true
+          },
+          "teams": {
+            "home": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": true
+            },
+            "away": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": false
+            }
+          },
+          "goals": {
+            "home": 5,
+            "away": 1
+          },
+          "score": {
+            "halftime": {
+              "home": 1,
+              "away": 0
+            },
+            "fulltime": {
+              "home": 5,
+              "away": 1
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": null,
+              "away": null
+            }
+          }
+        },
+        {
+          "fixture": {
+            "id": 681771,
+            "referee": null,
+            "timezone": "UTC",
+            "date": "2021-09-11T00:00:00+00:00",
+            "timestamp": 1631318400,
+            "periods": {
+              "first": null,
+              "second": null
+            },
+            "venue": {
+              "id": 1182,
+              "name": "Åråsen Stadion",
+              "city": "Kjeller"
+            },
+            "status": {
+              "long": "Match Cancelled",
+              "short": "CANC",
+              "elapsed": null,
+              "extra": null
+            }
+          },
+          "league": {
+            "id": 103,
+            "name": "Eliteserien",
+            "country": "Norway",
+            "logo": "https://media.api-sports.io/football/leagues/103.png",
+            "flag": "https://media.api-sports.io/flags/no.svg",
+            "season": 2021,
+            "round": "Regular Season - 21",
+            "standings": true
+          },
+          "teams": {
+            "home": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": null
+            },
+            "away": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": null
+            }
+          },
+          "goals": {
+            "home": null,
+            "away": null
+          },
+          "score": {
+            "halftime": {
+              "home": null,
+              "away": null
+            },
+            "fulltime": {
+              "home": null,
+              "away": null
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": null,
+              "away": null
+            }
+          }
+        },
+        {
+          "fixture": {
+            "id": 693689,
+            "referee": "R. Saggi",
+            "timezone": "UTC",
+            "date": "2021-05-24T16:00:00+00:00",
+            "timestamp": 1621872000,
+            "periods": {
+              "first": 1621872000,
+              "second": 1621875600
+            },
+            "venue": {
+              "id": 1182,
+              "name": "Åråsen Stadion",
+              "city": "Kjeller"
+            },
+            "status": {
+              "long": "Match Finished",
+              "short": "FT",
+              "elapsed": 90,
+              "extra": null
+            }
+          },
+          "league": {
+            "id": 103,
+            "name": "Eliteserien",
+            "country": "Norway",
+            "logo": "https://media.api-sports.io/football/leagues/103.png",
+            "flag": "https://media.api-sports.io/flags/no.svg",
+            "season": 2021,
+            "round": "Regular Season - 4",
+            "standings": true
+          },
+          "teams": {
+            "home": {
+              "id": 321,
+              "name": "Lillestrom",
+              "logo": "https://media.api-sports.io/football/teams/321.png",
+              "winner": false
+            },
+            "away": {
+              "id": 759,
+              "name": "Viking",
+              "logo": "https://media.api-sports.io/football/teams/759.png",
+              "winner": true
+            }
+          },
+          "goals": {
+            "home": 1,
+            "away": 3
+          },
+          "score": {
+            "halftime": {
+              "home": 0,
+              "away": 2
+            },
+            "fulltime": {
+              "home": 1,
+              "away": 3
+            },
+            "extratime": {
+              "home": null,
+              "away": null
+            },
+            "penalty": {
+              "home": null,
+              "away": null
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
